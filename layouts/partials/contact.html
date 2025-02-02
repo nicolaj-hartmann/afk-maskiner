@@ -1,0 +1,35 @@
+<section id="kontakt" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">Kontakt Os</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="font-bold mb-4">Kontaktinformation</h3>
+                <p class="mb-2">Adresse: Resenborgvej 15, Herning</p>
+                <p class="mb-2">Email: Info@afkmaskiner.dk</p>
+                <a href="https://www.facebook.com/profile.php?id=61552727725383" 
+                   class="text-blue-600 hover:text-blue-800">
+                    Følg os på Facebook
+                </a>
+            </div>
+            <div>
+                <form class="space-y-4" action="/contact" method="POST">
+                    <div>
+                        <label class="block mb-2">Navn</label>
+                        <input type="text" name="name" class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block mb-2">Email</label>
+                        <input type="email" name="email" class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block mb-2">Besked</label>
+                        <textarea name="message" class="w-full p-2 border rounded" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+                        Send Besked
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section> 

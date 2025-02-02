@@ -1,0 +1,96 @@
+{{ define "main" }}
+<!-- Hero Section with Background Image -->
+<section class="min-h-[80vh] relative flex items-center">
+    <!-- Background image with overlay -->
+    <div class="absolute inset-0 z-0">
+        {{ $hero := resources.Get "images/hero.jpg" }}
+        <img src="{{ $hero.RelPermalink }}" 
+             alt="Hero background" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-900/85 via-orange-800/85 to-orange-950/90"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 py-16 relative z-10">
+        <div class="flex flex-col items-center text-center">
+            {{ $logo := resources.Get "images/logo-large.svg" }}
+            {{ with $logo }}
+            <div class="w-full max-w-2xl mb-12 transform hover:scale-105 transition-transform duration-300">
+                <img src="{{ .RelPermalink }}" 
+                     alt="AFK Maskiner Logo" 
+                     class="w-full h-auto">
+            </div>
+            {{ end }}
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">
+                Din Lokale Metalpartner i Midt-jylland
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-orange-100">
+                Vi skaber dine drømme i metal - fra højbede til specialløsninger. 
+                Kvalitetsarbejde til både private og erhverv.
+            </p>
+            
+            <div class="flex gap-4 mt-8">
+                <a href="/kontakt" 
+                   class="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 transition-colors duration-300">
+                    Kontakt Os
+                </a>
+                <a href="/services" 
+                   class="border-2 border-orange-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:border-orange-500 transition-colors duration-300">
+                    Se Vores Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Vores Kompetencer</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">CNC Plasmaskæring</h3>
+                <p>Vi kan skære stål i op til 25mm tykkelse i formater op til 2000*4000mm med høj præcision.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Kantpresning</h3>
+                <p>Præcis kantpresning af stål på op til 4000mm bredde til dine specifikke behov.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Pladevalse</h3>
+                <p>Professionel valseteknik af stål i op til 2000mm bredde med perfekt finish.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">3D Tegninger</h3>
+                <p>Vi udarbejder detaljerede 3D tegninger og arbejdstegninger af dit projekt.</p>
+            </div>
+        </div>
+
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold mb-8">Specialister i Cortenstål</h2>
+            <div class="prose max-w-none">
+                <p class="mb-4">
+                    Som eksperter i metalbearbejdning har vi særlig erfaring med Cortenstål - et holdbart og æstetisk materiale, der er perfekt til udendørs brug. Vi producerer blandt andet:
+                </p>
+                <ul class="list-disc pl-6 mb-6">
+                    <li>Bedkasser på specialmål</li>
+                    <li>Højbede i forskellige størrelser</li>
+                    <li>Kantafgrænsning</li>
+                    <li>Specialløsninger efter kundens ønsker</li>
+                </ul>
+                <p>
+                    Cortenstål er kendt for sin karakteristiske rustne overflade, der ikke kun ser flot ud, men også beskytter materialet mod yderligere korrosion. Dette gør det ideelt til udendørs projekter, hvor man ønsker et råt og moderne udtryk kombineret med lang holdbarhed.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "contact.html" . }}
+{{ end }} 

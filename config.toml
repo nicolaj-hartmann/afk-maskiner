@@ -1,0 +1,7 @@
+baseURL = 'https://afk-maskiner.dk/'
+languageCode = 'da-dk'
+title = 'AFK Maskiner'
+defaultContentLanguage = "da"
+
+[params]
+  description = "Specialister i CNC plasmaskæring, kantpresning og metalbearbejdning. Vi leverer kvalitetsløsninger i Cortenstål og andre metaller efter dine specifikationer." 

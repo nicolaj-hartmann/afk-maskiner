@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFK Maskiner - Metal & Stålarbejde i Herning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Inter'] bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="path-to-logo.png" alt="AFK Maskiner Logo" class="h-12">
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-blue-600">Forside</a>
+                <a href="#produkter" class="text-gray-700 hover:text-blue-600">Produkter</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#kontakt" class="text-gray-700 hover:text-blue-600">Kontakt</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Professionelt Metalarbejde i Midt-jylland
+            </h1>
+            <p class="text-xl mb-8">
+                Vi specialiserer os i CNC plasmaskæring, kantpresning og pladebearbejdning
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Vi Kan</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-3">CNC Plasmaskæring</h3>
+                    <p>Op til 25mm tykkelse i 2000*4000mm format</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-3">Kantpresning</h3>
+                    <p>Op til 4000mm bredde</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-3">Pladevalse</h3>
+                    <p>Op til 2000mm bredde</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-3">3D Tegninger</h3>
+                    <p>Visualisering og arbejdstegninger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Kontakt Os</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-bold mb-4">Kontaktinformation</h3>
+                    <p class="mb-2">Adresse: Resenborgvej 15, Herning</p>
+                    <p class="mb-2">Email: Info@afkmaskiner.dk</p>
+                    <a href="https://www.facebook.com/profile.php?id=61552727725383" 
+                       class="text-blue-600 hover:text-blue-800">
+                        Følg os på Facebook
+                    </a>
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block mb-2">Navn</label>
+                            <input type="text" class="w-full p-2 border rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Email</label>
+                            <input type="email" class="w-full p-2 border rounded">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Besked</label>
+                            <textarea class="w-full p-2 border rounded" rows="4"></textarea>
+                        </div>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+                            Send Besked
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 AFK Maskiner. Alle rettigheder forbeholdes.</p>
+        </div>
+    </footer>
+</body>
+</html> 
