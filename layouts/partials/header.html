@@ -1,25 +1,56 @@
 <header class="bg-white shadow-sm fixed w-full top-0 z-50">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center">
-            {{ $logo := resources.Get "images/logo.svg" }}
-            <a href="/">
-                {{ with $logo }}
-                    <img src="{{ .RelPermalink }}" alt="AFK Maskiner Logo" class="h-8 md:h-10">
-                {{ end }}
-            </a>
-        </div>
-        
-        <nav class="hidden md:flex space-x-8">
-            <a href="/" class="text-gray-700 hover:text-blue-600">Forside</a>
-            <a href="/produkter" class="text-gray-700 hover:text-blue-600">Produkter</a>
-            <a href="/services" class="text-gray-700 hover:text-blue-600">Services</a>
-            <a href="/kontakt" class="text-gray-700 hover:text-blue-600">Kontakt</a>
-        </nav>
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex items-center justify-between relative">
+            <div class="flex items-center">
+                {{ $logo := resources.Get "images/logo.svg" }}
+                <a href="/">
+                    {{ with $logo }}
+                        <img src="{{ .RelPermalink }}" alt="AFK Maskiner Logo" class="h-8 md:h-10">
+                    {{ end }}
+                </a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button onclick="toggleMenu()" class="md:hidden z-50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
 
-        <button class="md:hidden">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-        </button>
+            <!-- Overlay -->
+            <div id="menu-overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden"></div>
+            
+            <!-- Navigation -->
+            <nav id="mobile-menu" class="fixed md:static top-0 right-0 h-screen md:h-auto w-64 md:w-auto 
+                        bg-white md:bg-transparent shadow-lg md:shadow-none z-50
+                        transform translate-x-full md:translate-x-0 transition-transform duration-300">
+                <div class="flex flex-col md:flex-row md:space-x-8 p-6 md:p-0">
+                    <a href="/" class="text-gray-700 hover:text-blue-600 py-2 md:py-0">Forside</a>
+                    <a href="/produkter" class="text-gray-700 hover:text-blue-600 py-2 md:py-0">Produkter</a>
+                    <a href="/services" class="text-gray-700 hover:text-blue-600 py-2 md:py-0">Services</a>
+                    <a href="/kontakt" class="text-gray-700 hover:text-blue-600 py-2 md:py-0">Kontakt</a>
+                </div>
+            </nav>
+
+            <script>
+                function toggleMenu() {
+                    const menu = document.getElementById('mobile-menu');
+                    const overlay = document.getElementById('menu-overlay');
+                    
+                    if (menu.classList.contains('translate-x-full')) {
+                        // Open menu
+                        menu.classList.remove('translate-x-full');
+                        overlay.classList.remove('hidden');
+                    } else {
+                        // Close menu
+                        menu.classList.add('translate-x-full');
+                        overlay.classList.add('hidden');
+                    }
+                }
+
+                // Close menu when clicking overlay
+                document.getElementById('menu-overlay').addEventListener('click', toggleMenu);
+            </script>
+        </div>
     </div>
 </header> 

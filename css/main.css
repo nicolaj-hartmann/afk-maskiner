@@ -5,4 +5,21 @@
 /* Custom styles */
 .prose {
     @apply text-gray-700 leading-relaxed;
+}
+
+/* Toggle states */
+#mobile-menu-toggle:checked ~ .main-nav {
+    --tw-translate-x: 0;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+#mobile-menu-toggle:checked ~ .nav-overlay {
+    display: block;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .nav-overlay {
+        display: none !important;
+    }
 } 
